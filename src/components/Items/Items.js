@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Item from '../Item/Item';
 import './Items.css'
 
@@ -63,10 +63,30 @@ import './Items.css'
           }
       ]
 
-    const handleAddtoCart = (name) => {
-        console.log(name)
-    }
+  
     const Items = () => {
+        const [carts, setCarts] = useState([]);
+        
+        const [result, setresult] = useState()
+
+        const handleAddtoCart = (info) => {
+            // console.log(name)
+            const newCart = [...carts, info];
+            setCarts(newCart)
+        }
+
+
+        const handleToChoose = (carts) => {
+            const number = carts.length;
+           
+            const select = Math.random();
+            const newResult = carts[Math.floor(select*number)]
+            setresult(newResult);
+            console.log(result)
+            console.log()
+
+            
+        }
     return (
      
         <div className='containers'>
@@ -81,6 +101,14 @@ import './Items.css'
 
             <div className="Selected-items">
                 <h3>Selected Toys</h3>
+                {
+                    carts.map(cart => <li>{cart}</li>)
+                }
+                <button onClick={()=>handleToChoose(carts)}>Choose 1 for me</button>
+                <h3>Result</h3>
+                
+                <h1>{result }</h1>
+               
 
             </div>
         </div>

@@ -8,6 +8,14 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
 }
+.Selected-items{
+    border-radius: 10px;
+    width: 300px;
+    margin-left: 10px;
+    border: 10px lightpink;
+    text-align: center;
+    background-color: lightpink;
+}
 
 @media screen and (max-width: 690px) {
     .containers{
