@@ -1,8 +1,9 @@
 import React from 'react';
 import './Item.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 const Item = (props) => {
-    console.log(props)
     const {handleAddtoCart}=props
     const {name, price, picture} = props.info;
     return (
@@ -10,7 +11,10 @@ const Item = (props) => {
             <img src={picture} alt="" />
             <h3>{name}</h3>
             <p>Price: {price}</p>
-            <button onClick={()=>handleAddtoCart(name)}>Add to cart</button>
+            <button onClick={()=>handleAddtoCart(name)} className='btn2'>
+                <p>Add to cart  </p>
+                <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>    
+            </button>
             
         </div>
     );

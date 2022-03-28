@@ -15,6 +15,18 @@
     border: 10px lightpink;
     text-align: center;
     background-color: lightpink;
+    height: 500px;
+    position: sticky;
+    top: 0;
+}
+
+.btn{
+    padding: 10px;
+    border: none;
+    background-color: rgb(211, 98, 136);
+    color: white;
+    border-radius: 7px;
+    margin: 10px;
 }
 
 @media screen and (max-width: 690px) {

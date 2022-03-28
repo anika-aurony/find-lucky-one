@@ -6,8 +6,27 @@
 }
 .product{
     width: 260px;
-    height: 450px;
+    height: 430px;
     background-color: antiquewhite;
     text-align: center;
     border-radius: 10px;
+    
+    
+}
+.btn2{
+    padding: 1px;
+    width: 150px;
+    border: none;
+    background-color: rgb(211, 98, 136);
+    color: aliceblue;
+    border-radius: 7px;
+    margin: 10px 55px ;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+       
+}
+.Selected-items{
+    
 }

@@ -1,30 +1,14 @@
 import React, { useState } from 'react';
 import Item from '../Item/Item';
 import './Items.css'
+import Cart from '../Cart/Cart'
 
 
 
 
 
     const infos = [
-        {
-          "id": "68",
-          "picture": "https://t4.ftcdn.net/jpg/03/28/32/37/240_F_328323739_fwbfCrkIj7OhkOep8eA1NeYujcxYZnk4.jpg",
-          "price": 393,
-          "name": "Spectacles Bear"
-        },
-        {
-          "id": "620",
-          "picture": "https://t4.ftcdn.net/jpg/03/64/82/97/240_F_364829768_pEht69OtGqtUWFdG1GENvhWx6wBW3Qtj.jpg",
-          "price": 372,
-          "name": "Cute Teddy"
-        },
-        {
-          "id": "625",
-          "picture": "https://t4.ftcdn.net/jpg/00/90/64/77/240_F_90647754_UbkA8kptPwurBrOCsutT9Oj4QwdddE3y.jpg",
-          "price": 284,
-          "name": "Teddy Bear"
-        },
+        
         {
           "id": "624",
           "picture": "https://img.freepik.com/free-photo/cute-brown-teddy-bear-colored-knitted-scarf-sitting-white-background_116441-7370.jpg?size=338&ext=jpg&uid=R67583841&ga=GA1.2.847666869.1645108997",
@@ -60,7 +44,26 @@ import './Items.css'
             "picture": "https://t4.ftcdn.net/jpg/00/25/22/63/240_F_25226306_hbson6jOaRsunuGP3Oki7agK56o3gmVE.jpg",
             "price": 326,
             "name": "Dr. Teddy"
-          }
+          },
+          {
+            "id": "68",
+            "picture": "https://t4.ftcdn.net/jpg/03/28/32/37/240_F_328323739_fwbfCrkIj7OhkOep8eA1NeYujcxYZnk4.jpg",
+            "price": 393,
+            "name": "Spectacles Bear"
+          },
+          {
+            "id": "620",
+            "picture": "https://t4.ftcdn.net/jpg/03/64/82/97/240_F_364829768_pEht69OtGqtUWFdG1GENvhWx6wBW3Qtj.jpg",
+            "price": 372,
+            "name": "Cute Teddy"
+          },
+          {
+            "id": "625",
+            "picture": "https://t4.ftcdn.net/jpg/00/90/64/77/240_F_90647754_UbkA8kptPwurBrOCsutT9Oj4QwdddE3y.jpg",
+            "price": 284,
+            "name": "Teddy Bear"
+          },
+
       ]
 
   
@@ -70,9 +73,13 @@ import './Items.css'
         const [result, setresult] = useState()
 
         const handleAddtoCart = (info) => {
-            // console.log(name)
-            const newCart = [...carts, info];
-            setCarts(newCart)
+            // console.log(info)
+            if(carts.length<4){
+                const newCart = [...carts, info];
+                 setCarts(newCart)
+            }
+            
+            
         }
 
 
@@ -87,6 +94,16 @@ import './Items.css'
 
             
         }
+
+        const handleToChooseAgain = (carts) => {
+            carts = [];
+            setCarts(carts);
+            setresult();
+
+            
+        }
+
+
     return (
      
         <div className='containers'>
@@ -100,14 +117,7 @@ import './Items.css'
 
 
             <div className="Selected-items">
-                <h3>Selected Toys</h3>
-                {
-                    carts.map(cart => <li>{cart}</li>)
-                }
-                <button onClick={()=>handleToChoose(carts)}>Choose 1 for me</button>
-                <h3>Result</h3>
-                
-                <h1>{result }</h1>
+                <Cart carts={carts} handleToChoose={handleToChoose} result={result} handleToChooseAgain={handleToChooseAgain}></Cart>
                
 
             </div>
