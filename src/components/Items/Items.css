@@ -15,9 +15,10 @@
     border: 10px lightpink;
     text-align: center;
     background-color: lightpink;
-    height: 500px;
+    height: 450px;
     position: sticky;
     top: 0;
+    margin: 20px;
 }
 
 .btn{

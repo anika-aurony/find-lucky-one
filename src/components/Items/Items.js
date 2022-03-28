@@ -13,19 +13,7 @@ import Cart from '../Cart/Cart'
           "id": "624",
           "picture": "https://img.freepik.com/free-photo/cute-brown-teddy-bear-colored-knitted-scarf-sitting-white-background_116441-7370.jpg?size=338&ext=jpg&uid=R67583841&ga=GA1.2.847666869.1645108997",
           "price": 378,
-          "name": "Browm Bear"
-        },
-        {
-          "id": "64",
-          "picture": "https://img.freepik.com/free-photo/watercolor-illustration-bear-sailor_467247-1369.jpg?size=338&ext=jpg&uid=R67583841&ga=GA1.2.847666869.1645108997",
-          "price": 388,
-          "name": "Hello Bear"
-        },
-        {
-          "id": "75",
-          "picture": "https://img.freepik.com/free-photo/watercolor-illustration-bear-gives-flowers-bear_467247-1374.jpg?size=338&ext=jpg&uid=R67583841&ga=GA1.2.847666869.1645108997",
-          "price": 337,
-          "name": "Mr & Mrs"
+          "name": "Brown Bear"
         },
         {
           "id": "97",
@@ -39,6 +27,19 @@ import Cart from '../Cart/Cart'
             "price": 326,
             "name": "Mom & Baby"
           },
+        {
+          "id": "64",
+          "picture": "https://img.freepik.com/free-photo/watercolor-illustration-bear-sailor_467247-1369.jpg?size=338&ext=jpg&uid=R67583841&ga=GA1.2.847666869.1645108997",
+          "price": 388,
+          "name": "Hello Bear"
+        },
+        {
+          "id": "75",
+          "picture": "https://img.freepik.com/free-photo/watercolor-illustration-bear-gives-flowers-bear_467247-1374.jpg?size=338&ext=jpg&uid=R67583841&ga=GA1.2.847666869.1645108997",
+          "price": 337,
+          "name": "Mr & Mrs"
+        },
+       
           {
             "id": "62",
             "picture": "https://t4.ftcdn.net/jpg/00/25/22/63/240_F_25226306_hbson6jOaRsunuGP3Oki7agK56o3gmVE.jpg",
