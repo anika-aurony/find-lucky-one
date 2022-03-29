@@ -74,34 +74,24 @@ import Cart from '../Cart/Cart'
         const [result, setresult] = useState()
 
         const handleAddtoCart = (info) => {
-            // console.log(info)
             if(carts.length<4){
                 const newCart = [...carts, info];
                  setCarts(newCart)
-            }
-            
-            
+            }            
         }
-
 
         const handleToChoose = (carts) => {
             const number = carts.length;
-           
+           console.log(carts)
             const select = Math.random();
             const newResult = carts[Math.floor(select*number)]
-            setresult(newResult);
-            console.log(result)
-            console.log()
-
-            
+            setresult(newResult);    
         }
 
         const handleToChooseAgain = (carts) => {
             carts = [];
             setCarts(carts);
             setresult();
-
-            
         }
 
 
